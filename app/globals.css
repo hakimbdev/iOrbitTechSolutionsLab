@@ -134,6 +134,10 @@
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
 }
 
 @keyframes fadeIn {
@@ -208,5 +212,14 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }

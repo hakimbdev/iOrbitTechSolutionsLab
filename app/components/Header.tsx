@@ -64,14 +64,23 @@ export default function Header() {
       <div className="container mx-auto">
         <div className="flex h-20 items-center justify-between px-6">
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-              <span className="text-white font-bold text-lg">iO</span>
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-xl flex items-center justify-center transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent animate-shimmer"></div>
+              <div className="relative flex items-center justify-center">
+                <span className="text-white font-bold text-xl tracking-wider">iO</span>
+                <span className="absolute -bottom-1 w-4 h-1 bg-white/50 rounded-full"></span>
+              </div>
             </div>
-            <span className="text-2xl font-bold ml-2 group-hover:gradient-text transition-all duration-300 relative">
-              <span className={`${isScrolled ? "text-blue-600" : "text-white"}`}>
-                iOrbit Labs
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold group-hover:gradient-text transition-all duration-300 relative">
+                <span className={`${isScrolled ? "text-blue-600" : "text-white"}`}>
+                  iOrbit Tech
+                </span>
               </span>
-            </span>
+              <span className="text-sm font-medium ${isScrolled ? 'text-blue-500/80' : 'text-white/80'}">
+                Solutions Lab
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

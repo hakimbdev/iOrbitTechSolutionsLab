@@ -51,16 +51,16 @@ export default function Hero() {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center relative z-10">
         <div className="lg:w-1/2 mb-12 lg:mb-0 animate-slide-in-left">
           {/* Main Heading */}
-          <h1 className="text-6xl lg:text-8xl font-black mb-8 leading-tight text-white">
-            <span className="block">Innovating</span>
-            <span className="block">with</span>
-            <span className="gradient-text-animated text-shadow">Artificial Intelligence</span>
+          <h1 className="text-6xl lg:text-7xl font-black mb-8 leading-tight text-white">
+            <span className="block">Welcome to</span>
+            <span className="gradient-text-animated text-shadow block">iOrbit Tech</span>
+            <span className="text-4xl lg:text-5xl block mt-2">Solutions Lab</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl lg:text-2xl mb-10 text-blue-100 leading-relaxed max-w-2xl">
-            Transforming businesses through cutting-edge GenAI, Data Analysis, Web Development, and Cybersecurity
-            Services
+            Pioneering the future through advanced AI solutions, data analytics, and innovative technology consulting. 
+            Your partner in digital transformation.
           </p>
 
           {/* CTA Buttons */}
@@ -79,9 +79,9 @@ export default function Hero() {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8">
             {[
-              { number: "500+", label: "AI Projects", icon: Target },
-              { number: "98%", label: "Success Rate", icon: Zap },
-              { number: "50+", label: "Global Clients", icon: Sparkles },
+              { number: "500+", label: "Tech Solutions", icon: Target },
+              { number: "98%", label: "Client Satisfaction", icon: Zap },
+              { number: "100+", label: "Global Partners", icon: Sparkles },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="flex items-center justify-center mb-2">
