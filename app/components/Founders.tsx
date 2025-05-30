@@ -15,12 +15,12 @@ const founders = [
     linkedin: "#",
     twitter: "#",
     github: "#",
-    achievements: ["MIT PhD", "Google DeepMind", "15+ Years AI"],
+    achievements: ["Software Engineer", "Data Analyst", "15+ Years AI"],
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     name: "Adamu Abdullahi",
-    title: "CTO & Co-Founder",
+    title: "Technical Advisor",
     description:
       "Former Principal Engineer at Microsoft Azure with expertise in cloud architecture and scalable systems.",
     image:
@@ -28,7 +28,7 @@ const founders = [
     linkedin: "#",
     twitter: "#",
     github: "#",
-    achievements: ["Stanford MS", "Microsoft Azure", "Cloud Expert"],
+    achievements: ["Strategist", "Microsoft Azure", "Cloud Expert"],
     gradient: "from-purple-500 to-pink-500",
   },
   {
@@ -41,7 +41,7 @@ const founders = [
     linkedin: "#",
     twitter: "#",
     github: "#",
-    achievements: ["UC Berkeley PhD", "Tesla Lead", "12+ Years Data"],
+    achievements: ["Brand Analysis", "Content Creation", "12+ Years Data"],
     gradient: "from-emerald-500 to-teal-500",
   },
 ]
