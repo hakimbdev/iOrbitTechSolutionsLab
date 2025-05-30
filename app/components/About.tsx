@@ -15,7 +15,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">About iOrbit Labs</h2>
           <p className="text-xl max-w-3xl mx-auto">
-            Founded in 2019, iOrbit Labs has been at the forefront of artificial intelligence innovation, helping
+            Founded in 2019, iOrbit Tech Solutions Lab has been at the forefront of artificial intelligence innovation, helping
             businesses transform their operations through cutting-edge technology solutions.
           </p>
         </div>

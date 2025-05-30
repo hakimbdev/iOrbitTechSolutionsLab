@@ -6,7 +6,6 @@ import Portfolio from "./components/Portfolio"
 import Founders from "./components/Founders"
 import TechPartners from "./components/TechPartners"
 import Contact from "./components/Contact"
-import Chatbot from "./components/Chatbot"
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <Founders />
       <TechPartners />
       <Contact />
-      <Chatbot />
     </main>
   )
 }
