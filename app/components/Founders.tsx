@@ -7,15 +7,15 @@ import { Linkedin, Twitter, Github } from "lucide-react"
 const founders = [
   {
     name: "Abdulhakim Ahmad",
-    title: "CEO & Co-Founder",
+    title: "CEO",
     description:
-      "Former AI Research Director at Google DeepMind with 15+ years in artificial intelligence and machine learning.",
+      "Former AI Expert at Google DeepMind with 15+ years in artificial intelligence and machine learning.",
     image:
       "https://res.cloudinary.com/dc5qncppu/image/upload/v1748265942/pp1_ek8kwj.jpg",
     linkedin: "#",
     twitter: "#",
     github: "#",
-    achievements: ["Software Engineer", "Data Analyst", "15+ Years AI"],
+    achievements: ["Software Engineer", "Artificial Intelligence Expert", "15+ Years AI"],
     gradient: "from-blue-500 to-cyan-500",
   },
   {
