@@ -1,126 +1,142 @@
 "use client"
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Image from "next/image"
+import Image from 'next/image'
+import Link from 'next/link'
 
 const caseStudies = [
   {
-    title: "AI-Powered Customer Service",
-    client: "Global E-commerce Platform",
-    description: "Implemented an AI chatbot system that reduced response time by 80% and increased customer satisfaction by 45%.",
-    image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1749308419/image0_1_qmhfmk.jpg",
+    id: 1,
+    title: "AI-Powered Customer Service Automation",
+    description: "Implemented an intelligent chatbot system that reduced response time by 80% and improved customer satisfaction scores.",
+    category: "Artificial Intelligence",
+    images: [
+      "https://res.cloudinary.com/dc5qncppu/image/upload/v1749319567/technology-human-touch-background-modern-remake-creation-adam_zdxm59.jpg",
+      "https://res.cloudinary.com/dc5qncppu/image/upload/v1749308419/image0_1_qmhfmk.jpg"
+    ],
     results: [
       "80% reduction in response time",
-      "45% increase in customer satisfaction",
+      "95% customer satisfaction rate",
       "60% cost reduction in customer service"
-    ],
-    industry: "E-commerce"
+    ]
   },
   {
-    title: "Predictive Maintenance System",
-    client: "Manufacturing Giant",
-    description: "Developed a machine learning system that predicts equipment failures, reducing downtime by 70%.",
-    image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1746365263/5_rr2jvv.jpg",
-    results: [
-      "70% reduction in equipment downtime",
-      "40% decrease in maintenance costs",
-      "85% accuracy in failure prediction"
+    id: 2,
+    title: "Predictive Analytics for Retail",
+    description: "Developed a machine learning model to predict inventory needs and optimize supply chain management.",
+    category: "Machine Learning",
+    images: [
+      "https://res.cloudinary.com/dc5qncppu/image/upload/v1748431361/Educational_Data_Analytics_Dashboard_yqg4am.jpg",
+      
     ],
-    industry: "Manufacturing"
+    results: [
+      "30% reduction in inventory costs",
+      "25% improvement in stock availability",
+      "40% reduction in supply chain delays"
+    ]
   },
   {
-    title: "Data Analytics Platform",
-    client: "Financial Services Provider",
-    description: "Built a comprehensive data analytics platform that improved decision-making efficiency by 65%.",
-    image: "https://res.cloudinary.com/dc5qncppu/image/upload/v1748276042/1747071940377_mwdn27.jpg",
-    results: [
-      "65% improvement in decision-making efficiency",
-      "50% reduction in data processing time",
-      "30% increase in revenue"
+    id: 3,
+    title: "Data Visualization Dashboard",
+    description: "Created an interactive dashboard for real-time business analytics and reporting.",
+    category: "Data Analytics",
+    images: [
+      "https://res.cloudinary.com/dc5qncppu/image/upload/v1748431361/mutlti_lingual_ztybls.jpg",
+      
     ],
-    industry: "Finance"
+    results: [
+      "50% faster decision-making process",
+      "75% improvement in data accessibility",
+      "90% user adoption rate"
+    ]
   }
 ]
 
-export default function CaseStudies() {
+export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Case Studies
-            </h1>
-            <p className="text-xl text-indigo-100 mb-8">
-              Discover how we've helped businesses transform their operations
-              with innovative AI and data solutions.
-            </p>
-          </div>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      {/* Header */}
+      <div className="bg-white dark:bg-gray-800">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+            Case Studies
+          </h1>
+          <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">
+            Explore how we've helped businesses transform through technology
+          </p>
         </div>
-      </section>
+      </div>
 
       {/* Case Studies Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300">
-                <div className="relative h-64">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {caseStudies.map((study) => (
+            <div
+              key={study.id}
+              className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 dark:bg-gray-800"
+            >
+              {/* Image Gallery */}
+              <div className="relative h-64 w-full overflow-hidden">
+                <div className="relative h-full w-full">
                   <Image
-                    src={study.image}
+                    src={study.images[0]}
                     alt={study.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4">
-                    <span className="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">
-                      {study.industry}
-                    </span>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold">{study.title}</CardTitle>
-                  <CardDescription className="text-lg font-semibold text-gray-600">
-                    {study.client}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-6">{study.description}</p>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-gray-800">Key Results:</h4>
-                    <ul className="space-y-2">
-                      {study.results.map((result, i) => (
-                        <li key={i} className="flex items-center text-gray-600">
-                          <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full mr-2" />
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+                {/* Thumbnail Gallery */}
+                <div className="absolute bottom-0 left-0 right-0 flex space-x-2 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  {study.images.map((image, index) => (
+                    <div key={index} className="relative h-16 w-16 overflow-hidden rounded-lg">
+                      <Image
+                        src={image}
+                        alt={`${study.title} - Image ${index + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve similar results for your business
-            with our innovative solutions.
-          </p>
-          <button className="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300">
-            Schedule a Consultation
-          </button>
+              {/* Content */}
+              <div className="p-6">
+                <div className="mb-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                  {study.category}
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{study.title}</h3>
+                <p className="mt-2 text-gray-600 dark:text-gray-300">{study.description}</p>
+                
+                {/* Results */}
+                <div className="mt-6">
+                  <h4 className="text-base font-semibold text-gray-900 dark:text-white mb-3">Key Results:</h4>
+                  <ul className="space-y-2">
+                    {study.results.map((result, index) => (
+                      <li key={index} className="flex items-start text-gray-600 dark:text-gray-300">
+                        <span className="mr-2 text-blue-500">•</span>
+                        <span>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Read More Button */}
+                <div className="mt-6">
+                  <Link
+                    href={`/case-studies/${study.id}`}
+                    className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  >
+                    Read Full Case Study
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
     </div>
   )
 } 
