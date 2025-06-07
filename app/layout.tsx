@@ -1,14 +1,18 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Script from 'next/script'
 import Navigation from './components/Navigation'
+import { Github, Twitter, Linkedin } from 'lucide-react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'iOrbit Tech Solutions Lab',
-  description: 'Engaging with AGI, Data Science, Web Apps, Games & Generative Arts',
-  generator: 'v0.dev'
+  description: 'Empowering businesses with cutting-edge AI and machine learning solutions.',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
@@ -18,79 +22,99 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} min-h-full flex flex-col`}>
-        <Navigation />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <footer className="bg-gray-900 text-white py-8">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold mb-4">iOrbit Tech Solutions</h3>
-                <p className="text-gray-400 text-sm">
-                  Empowering businesses with innovative AI and data solutions.
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+      </head>
+      <body className={`${inter.className} h-full bg-gray-50 dark:bg-gray-900`}>
+        <div className="min-h-full flex flex-col">
+          <Navigation />
+          <main className="flex-1">
+            {children}
+          </main>
+          <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">iOrbit Tech Solutions Lab</h3>
+                  <p className="mt-4 text-sm text-gray-600 dark:text-gray-300">
+                    Empowering businesses with cutting-edge AI and machine learning solutions.
+                  </p>
+                  <div className="mt-6 flex space-x-6">
+                    <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200">
+                      <span className="sr-only">Twitter</span>
+                      <Twitter className="h-6 w-6" />
+                    </a>
+                    <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200">
+                      <span className="sr-only">GitHub</span>
+                      <Github className="h-6 w-6" />
+                    </a>
+                    <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200">
+                      <span className="sr-only">LinkedIn</span>
+                      <Linkedin className="h-6 w-6" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Links</h3>
+                  <ul className="mt-4 space-y-2">
+                    <li>
+                      <a href="/ai-solutions" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
+                        AI Solutions
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/machine-learning" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
+                        Machine Learning
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/data-analysis" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
+                        Data Analysis
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/case-studies" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
+                        Case Studies
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Contact</h3>
+                  <ul className="mt-4 space-y-2">
+                    <li className="text-sm text-gray-600 dark:text-gray-300">
+                      Email: info@iots.com
+                    </li>
+                    <li className="text-sm text-gray-600 dark:text-gray-300">
+                      Phone: +234 80-6255-8567
+                    </li>
+                    <li className="text-sm text-gray-600 dark:text-gray-300">
+                      Address: Suite 167 Gwarinpa, Abuja, Nigeria.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8">
+                <p className="text-center text-sm text-gray-600 dark:text-gray-300">
+                  © {new Date().getFullYear()} iOrbit Tech Solutions Lab. All rights reserved.
                 </p>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="/ai-solutions" className="text-gray-400 hover:text-white transition-colors">AI Solutions</a></li>
-                  <li><a href="/data-analysis" className="text-gray-400 hover:text-white transition-colors">Data Analysis</a></li>
-                  <li><a href="/machine-learning" className="text-gray-400 hover:text-white transition-colors">Machine Learning</a></li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-4">Contact</h3>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li>Email: info@iorbittech.com</li>
-                  <li>Phone: +1 (555) 123-4567</li>
-                  <li>Address: 123 Tech Street, Silicon Valley, CA</li>
-                </ul>
-              </div>
             </div>
-            <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-              <p>&copy; {new Date().getFullYear()} iOrbit Tech Solutions. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
-        <Script
-          id="chatbase-script"
-          strategy="afterInteractive"
+          </footer>
+        </div>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.chatbaseConfig = {
-                chatbotId: 'cHJiNxm8fLiEz0IwfrNXR',
-                name: 'iOrbit Assistant'
-              };
-              (function(){
-                if(!window.chatbase||window.chatbase("getState")!=="initialized"){
-                  window.chatbase=(...arguments)=>{
-                    if(!window.chatbase.q){window.chatbase.q=[]}
-                    window.chatbase.q.push(arguments)
-                  };
-                  window.chatbase=new Proxy(window.chatbase,{
-                    get(target,prop){
-                      if(prop==="q"){return target.q}
-                      return(...args)=>target(prop,...args)
-                    }
-                  })
-                }
-                const onLoad=function(){
-                  const script=document.createElement("script");
-                  script.src="https://www.chatbase.co/embed.min.js";
-                  script.id="cHJiNxm8fLiEz0IwfrNXR";
-                  script.domain="www.chatbase.co";
-                  document.body.appendChild(script)
-                };
-                if(document.readyState==="complete"){
-                  onLoad()
-                }else{
-                  window.addEventListener("load",onLoad)
-                }
-              })();
-            `
+                chatbotId: "YOUR_CHATBOT_ID"
+              }
+            `,
           }}
+        />
+        <script
+          src="https://www.chatbase.co/embed.min.js"
+          strategy="lazyOnload"
         />
       </body>
     </html>
