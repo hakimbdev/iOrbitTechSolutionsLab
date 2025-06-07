@@ -2,10 +2,12 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navigation from './components/Navigation'
 import { Github, Twitter, Linkedin } from 'lucide-react'
+import type { Metadata } from 'next'
+import Chatbot from './components/Chatbot'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'iOrbit Tech Solutions Lab',
   description: 'Empowering businesses with cutting-edge AI and machine learning solutions.',
   icons: {
@@ -103,6 +105,7 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
+        <Chatbot />
         <script
           dangerouslySetInnerHTML={{
             __html: `
