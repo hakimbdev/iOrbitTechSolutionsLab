@@ -25,6 +25,26 @@ const partners = [
     name: "AI Everything Germany",
     logo: "https://res.cloudinary.com/dc5qncppu/image/upload/v1748459510/AI_Everything_Germany_pfllsg.png",
     description: "AI Innovation Partner"
+  },
+  {
+    name: "Kusama Devs",
+    logo: "https://res.cloudinary.com/dc5qncppu/image/upload/v1751112250/72gTG-fc_400x400_qmnaoz.jpg",
+    description: "Blockchain Development Partner"
+  },
+  {
+    name: "Polkadot",
+    logo: "https://res.cloudinary.com/dc5qncppu/image/upload/v1751112250/SRcyofz5_400x400_vmieuw.jpg",
+    description: "Blockchain"
+  },
+  {
+    name: "Polkadot Africa",
+    logo: "https://res.cloudinary.com/dc5qncppu/image/upload/v1751112251/GrT2PeCF_400x400_nkxkhh.jpg",
+    description: "African Blockchain Partner"
+  },
+  {
+    name: "Polkadot Arewa",
+    logo: "https://res.cloudinary.com/dc5qncppu/image/upload/v1751116232/Untitled_design_csfhus.png",
+    description: "Northern Nigeria Blockchain Partner"
   }
 ]
 
@@ -150,7 +170,9 @@ export default function Home() {
                     src={partner.logo}
                     alt={partner.name}
                     fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-105"
+                    className={`transition-transform duration-300 group-hover:scale-105 ${
+                      partner.name === "Polkadot Africa" ? "object-contain object-center" : "object-contain"
+                    }`}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                 </div>
