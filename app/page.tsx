@@ -140,6 +140,34 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Security & Compliance Section */}
+      <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/10 dark:to-orange-900/10 py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              Security & Compliance First
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
+              Your data security and privacy are our top priorities. We maintain the highest standards of cybersecurity compliance.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/privacy-policy"
+                className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/cybersecurity-compliance"
+                className="inline-flex items-center justify-center rounded-md border border-red-600 bg-white px-6 py-3 text-base font-medium text-red-600 shadow-sm hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-colors duration-200 dark:bg-gray-800 dark:border-red-400 dark:text-red-400 dark:hover:bg-red-900/20"
+              >
+                Security Compliance
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Tech Partners Section */}
       <div className="bg-white dark:bg-gray-800 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

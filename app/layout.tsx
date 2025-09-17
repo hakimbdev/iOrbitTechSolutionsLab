@@ -98,6 +98,16 @@ export default function RootLayout({
                         Partnership Services
                       </a>
                     </li>
+                    <li>
+                      <a href="/privacy-policy" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/cybersecurity-compliance" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
+                        Security Compliance
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div>

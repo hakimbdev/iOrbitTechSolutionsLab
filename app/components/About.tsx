@@ -20,7 +20,8 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        <diImplement Privacy Policy page along with Cybersecurity Compliance
+        v className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <Card key={index} className="bg-white/10 border-white/20 text-center">
               <CardContent className="p-6">
