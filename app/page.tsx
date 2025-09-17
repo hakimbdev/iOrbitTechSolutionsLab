@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from 'next/image'
+import { Calendar } from 'lucide-react'
 import styles from './home.module.css'
 
 const partners = [
@@ -164,6 +165,143 @@ export default function Home() {
                 Security Compliance
               </Link>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Robotics Highlight Section */}
+      <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/10 dark:to-indigo-900/10 py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              World of Robotics
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
+              Explore cutting-edge robotics and AI innovations that are reshaping the future of technology
+            </p>
+          </div>
+          <div className="mx-auto mt-12 max-w-4xl">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="lg:w-1/2">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    Yamaha Motoroid 2: AI-Powered Revolution
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6">
+                    Witness the world's first artificial intelligence motorbike that combines autonomous balancing, intelligent rider interaction, and advanced AI decision-making capabilities.
+                  </p>
+                  <Link
+                    href="/robotics"
+                    className="inline-flex items-center justify-center rounded-md bg-purple-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors duration-200"
+                  >
+                    Explore Robotics World
+                  </Link>
+                </div>
+                <div className="lg:w-1/2">
+                  <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                    <div className="aspect-video bg-gradient-to-br from-purple-400 to-indigo-600 rounded-lg flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <div className="text-4xl mb-2">🤖</div>
+                        <div className="text-lg font-semibold">AI Robotics</div>
+                        <div className="text-sm opacity-90">Innovation Showcase</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Stories Highlight Section */}
+      <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/10 dark:to-blue-900/10 py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              Our Latest Stories
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
+              Discover our journey through major tech events and innovations that shape Africa's digital future
+            </p>
+          </div>
+          <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            <div className="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/da8ptobvx/image/upload/v1758051492/1000003726_wk5z8i.jpg"
+                  alt="GITEX Tech Event 2025 - Abuja"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  GITEX Tech Event 2025
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  Our participation in Nigeria's premier technology event across Abuja and Lagos
+                </p>
+                <div className="flex items-center text-sm text-blue-600 dark:text-blue-400">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  2025 • Abuja & Lagos
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/da8ptobvx/image/upload/v1758051492/uraz_lhp5te.jpg"
+                  alt="Innovation Showcase"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Innovation Showcase
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  Demonstrating cutting-edge cybersecurity solutions to industry leaders
+                </p>
+                <div className="flex items-center text-sm text-blue-600 dark:text-blue-400">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  2025 • Tech Innovation
+                </div>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/da8ptobvx/image/upload/v1758051488/1000004560_x3qhjg.jpg"
+                  alt="Partnership Networking"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Partnership Networking
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  Building strategic partnerships with technology companies and agencies
+                </p>
+                <div className="flex items-center text-sm text-blue-600 dark:text-blue-400">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  2025 • Business Growth
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              href="/stories"
+              className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200"
+            >
+              View All Stories
+            </Link>
           </div>
         </div>
       </div>

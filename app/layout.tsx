@@ -84,6 +84,16 @@ export default function RootLayout({
                       </a>
                     </li>
                     <li>
+                      <a href="/robotics" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
+                        World of Robotics
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/stories" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
+                        Stories
+                      </a>
+                    </li>
+                    <li>
                       <a href="/data-analysis" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors duration-200">
                         Data Analysis
                       </a>
